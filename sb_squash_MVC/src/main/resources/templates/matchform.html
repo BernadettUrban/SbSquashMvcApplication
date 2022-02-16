@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<form action="/reglocation" method="get">
+	    <input type="text" name="playerone" placeholder="playerOne" />
+	    <input type="text" name="pointsplayerone" placeholder="pointsPlayerOne" />
+	    <input type="text" name="playertwo" placeholder="playerTwo" />
+	    <input type="text" name="pointsplayertwo" placeholder="pointsPlayerTwo" />
+	    <input type="text" name="location" placeholder="location" />
+	    <input type="text" name="date" placeholder="date" />
+	    <input type="submit" />
+    </form>
+    
+    <form action="/regmatch" method="get">
+	    <select name="playerone">
+		  <option th:each="playerone ${users} th:text=${playerone}" ></option>
+		</select>
+    
+	    <input type="text" name="pointsplayerone" placeholder="pointsPlayerOne" />
+	     <select name="playertwo">
+		  <option th:each="playertwo ${users} th:text=${playertwo}" ></option>
+		</select>
+	    <input type="text" name="pointsplayertwo" placeholder="pointsPlayerTwo" />
+	     <select name="location">
+		  <option th:each="location ${locations} th:text=${location}" ></option>
+		</select>
+	    
+	    <input type="text" name="date" placeholder="date" />
+	    <input type="submit" />
+    </form>
+
+
+</body>
+</html>
